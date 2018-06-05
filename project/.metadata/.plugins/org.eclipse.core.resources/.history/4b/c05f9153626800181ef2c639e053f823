@@ -1,0 +1,17 @@
+package com.rasika.tmapp.model;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+
+public class Task implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+	
+	@Column(name="TASK_ID")
+	private String taskId;
+	
+	@Column(name="SKILL")
+	private String skill;
+	
+}

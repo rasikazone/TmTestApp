@@ -1,0 +1,19 @@
+package com.rasika.tmapp;
+
+import org.apache.logging.log4j.Logger;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
+
+@SpringBootApplication
+@EnableJpaAuditing
+public class TmappApplication {
+
+	final static Logger logger = Logger.getLogger(TmappApplication.class);
+	
+	public static void main(String[] args) {
+		
+		
+		SpringApplication.run(TmappApplication.class, args);
+	}
+}

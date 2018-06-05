@@ -1,0 +1,9 @@
+package com.rasika.tmapp.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.rasika.tmapp.model.TeamSkill;
+
+public interface TeamSkillRepo extends JpaRepository<TeamSkill,Long>{
+
+}

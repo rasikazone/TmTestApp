@@ -1,0 +1,7 @@
+package com.rasika.tmapp.model;
+
+import java.io.Serializable;
+
+public class TeamSlill implements Serializable {
+
+}

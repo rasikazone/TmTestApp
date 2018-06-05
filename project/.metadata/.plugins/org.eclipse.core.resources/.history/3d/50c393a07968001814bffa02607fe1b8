@@ -1,0 +1,29 @@
+package com.rasika.tmapp;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
+
+import com.rasika.tmapp.listener.FileListener;
+
+@SpringBootApplication
+@EnableJpaAuditing
+
+@Configuration
+@EnableAutoConfiguration
+@ComponentScan({"com.rasika", "com.controller", "com.repositories", "com.service", "com.model"})
+@EntityScan(basePackages = {"com.model"})
+@EnableJpaRepositories(basePackages = {"com.rasika.tmapp.repo"})
+
+public class TMApplication {
+
+
+	public static void main(String[] args) {
+		
+		
+		SpringApplication.run(TMApplication.class, args);
+		
+		new FileListener().start();
+		
+	}
+}
